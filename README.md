@@ -24,7 +24,7 @@
 2. 進入專案資料夾
 > cd middleware-practice
 
-3. 安裝 npm & 透過 npm 安裝以下套件
+3. 安裝 npm & 透過 npm 安裝套件
 > npm install
 
 4. 使用腳本啟動專案
