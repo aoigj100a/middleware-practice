@@ -15,10 +15,11 @@
 2. Express v4.17.1
 3. Nodemon v2.0.6
 4. luxon v1.25.0
+5. response-time v2.3.2
 
 ## Installing - 專案安裝流程
 1. 開啟終端機，執行以下指令 :
-> git clone 
+> git clone https://github.com/aoigj100a/middleware-practice
 
 2. 進入專案資料夾
 > cd middleware-practice

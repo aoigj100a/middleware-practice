@@ -1,17 +1,19 @@
 const express = require('express')
 const { DateTime } = require('luxon');
 
+const responseTime = require('response-time')
+
 const app = express()
 const port = 3000
 
-app.use((req, res, next) => {
+app.use(responseTime((req, res, time) => {
     const timeOdj = DateTime.local()
     const date = timeOdj.toISODate()
-    const time = timeOdj.toISOTime()
+    const mytime = timeOdj.toISOTime()
     //2019-5-17 18:51:12 | GET from /
-    console.log(`${date} ${time} | ${req.method} from ${req.url}`);
-    next()
-})
+    console.log(`${date} ${mytime} | ${req.method} from ${req.url} | total time: ${time}ms`);
+
+}))
 
 app.get('/', (req, res) => {
     res.send('列出全部 Todo')
